@@ -36,3 +36,4 @@ ls --color=auto .freeCodeCamp/
 more /proc/670/environ
 hostname
 echo hello SQL
+psql --username=freecodecamp --dbname=postgres
