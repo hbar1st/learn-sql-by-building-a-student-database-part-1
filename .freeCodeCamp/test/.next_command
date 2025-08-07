@@ -78,3 +78,5 @@ pg_dump -U freecodecamp -d postgres > students.sql
 more students.sql
 pg_dump -U freecodecamp -d students > students.sql
 more students.sql
+ls --color=auto
+./insert_data.sh
