@@ -37,3 +37,4 @@ more /proc/670/environ
 hostname
 echo hello SQL
 psql --username=freecodecamp --dbname=postgres
+touch insert_data.sh
