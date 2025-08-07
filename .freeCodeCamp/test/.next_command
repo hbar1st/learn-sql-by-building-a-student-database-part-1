@@ -38,3 +38,4 @@ hostname
 echo hello SQL
 psql --username=freecodecamp --dbname=postgres
 touch insert_data.sh
+chmod +x insert_data.sh
