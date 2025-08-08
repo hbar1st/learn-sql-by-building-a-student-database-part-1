@@ -92,3 +92,4 @@ psql -h
 psql --help
 __vsc_prompt_cmd_original
 psql --username=freecodecamp --dbname=postgres
+./insert_data.sh
