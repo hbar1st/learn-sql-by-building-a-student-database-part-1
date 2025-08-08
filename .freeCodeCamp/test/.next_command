@@ -84,3 +84,11 @@ ls --color=auto
 declare -p IFS
 ./insert_data.sh
 ./insert_data.sh
+psql help
+help psql
+read psql
+which psql
+psql -h
+psql --help
+__vsc_prompt_cmd_original
+psql --username=freecodecamp --dbname=postgres
