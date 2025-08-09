@@ -94,3 +94,4 @@ __vsc_prompt_cmd_original
 psql --username=freecodecamp --dbname=postgres
 ./insert_data.sh
 cp courses.csv courses_test.csv
+__vsc_prompt_cmd_original
