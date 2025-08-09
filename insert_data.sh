@@ -13,6 +13,10 @@ do
   then
     #insert major
     INSERT_MAJOR_RESULT=$($PSQL "insert into majors(major) values('$MAJOR')")
+    if [[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]] 
+    then
+      echo "Inserted into majors, $MAJOR"
+    fi
     #get new major_id
   fi
   #get course_id
