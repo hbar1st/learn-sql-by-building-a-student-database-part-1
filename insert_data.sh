@@ -18,6 +18,7 @@ do
       echo "Inserted into majors, $MAJOR"
     fi
     #get new major_id
+    MAJOR_ID=$($PSQL "select '$MAJOR' from majors")
   fi
   #get course_id
   #if not found
