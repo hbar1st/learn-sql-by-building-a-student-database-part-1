@@ -115,3 +115,5 @@ echo $?
 ./insert_data.sh
 ./insert_data.sh
 cp students.csv students_test.csv
+history
+pg_dump -U freecodecamp -d students > students.sql

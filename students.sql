@@ -163,7 +163,9 @@ ALTER TABLE ONLY public.students ALTER COLUMN student_id SET DEFAULT nextval('pu
 --
 
 COPY public.courses (course_id, course) FROM stdin;
-1	Data Structures and Algorithms
+8	Data Structures and Algorithms
+9	Web Programming
+10	Database Systems
 \.
 
 
@@ -172,7 +174,9 @@ COPY public.courses (course_id, course) FROM stdin;
 --
 
 COPY public.majors (major_id, major) FROM stdin;
-1	Database Administration
+21	Database Administration
+22	Web Development
+23	Data Science
 \.
 
 
@@ -181,7 +185,10 @@ COPY public.majors (major_id, major) FROM stdin;
 --
 
 COPY public.majors_courses (major_id, course_id) FROM stdin;
-1	1
+21	8
+22	9
+21	10
+23	8
 \.
 
 
@@ -190,7 +197,6 @@ COPY public.majors_courses (major_id, course_id) FROM stdin;
 --
 
 COPY public.students (student_id, first_name, last_name, major_id, gpa) FROM stdin;
-1	Rhea	Kellems	1	2.5
 \.
 
 
@@ -198,14 +204,14 @@ COPY public.students (student_id, first_name, last_name, major_id, gpa) FROM std
 -- Name: courses_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.courses_course_id_seq', 1, true);
+SELECT pg_catalog.setval('public.courses_course_id_seq', 10, true);
 
 
 --
 -- Name: majors_major_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.majors_major_id_seq', 1, true);
+SELECT pg_catalog.setval('public.majors_major_id_seq', 23, true);
 
 
 --
@@ -228,7 +234,7 @@ ALTER TABLE ONLY public.courses
 --
 
 ALTER TABLE ONLY public.majors_courses
-    ADD CONSTRAINT majors_courses_pkey PRIMARY KEY (course_id, major_id);
+    ADD CONSTRAINT majors_courses_pkey PRIMARY KEY (major_id, course_id);
 
 
 --
