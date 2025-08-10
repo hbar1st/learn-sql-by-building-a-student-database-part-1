@@ -56,6 +56,7 @@ do
   then
     #get major_id
     MAJOR_ID=$($PSQL "select major_id from majors where major='$MAJOR'")
+    echo $MAJOR_ID
     #if not found
     #set to null
     #insert student
