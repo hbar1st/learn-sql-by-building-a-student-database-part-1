@@ -43,5 +43,9 @@ do
     fi
     # insert into majors_courses
     INSERT_MAJORS_COURSES_RESULT=$($PSQL "insert into majors_courses (major_id, course_id) values ('$MAJOR_ID','$COURSE_ID')")
+    if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]
+    then
+      echo Inserted into majors_courses, $MAJOR : $COURSE
+    fi
   fi
 done
