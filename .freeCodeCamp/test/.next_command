@@ -123,3 +123,4 @@ pg_dump -U freecodecamp -d students > students.sql
 ./insert_data.sh
 clear
 ./insert_data.sh
+ls --color=auto
