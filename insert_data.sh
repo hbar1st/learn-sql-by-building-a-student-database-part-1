@@ -66,5 +66,9 @@ do
 
     #insert student
     INSERT_STUDENT_RESULT=$($PSQL "insert into students(first_name, last_name, major_id, gpa) values('$FIRST', '$LAST', $MAJOR_ID, $GPA)")
+    if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
+    then
+      echo Inserted into students, $FIRST $LAST
+    fi
   fi
 done
