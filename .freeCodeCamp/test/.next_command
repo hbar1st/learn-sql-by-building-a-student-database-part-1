@@ -119,3 +119,4 @@ history
 pg_dump -U freecodecamp -d students > students.sql
 ./insert_data.sh
 ./insert_data.sh
+./insert_data.sh
