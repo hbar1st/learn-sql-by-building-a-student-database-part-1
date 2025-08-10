@@ -109,3 +109,5 @@ read bash
 ./insert_data.sh
 echo $?
 ./insert_data.sh
+./insert_data.sh
+./insert_data.sh
